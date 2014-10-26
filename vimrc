@@ -111,3 +111,10 @@ nmap Q gqap
 " move vertically by visual line
 nnoremap j gj
 nnoremap k gk
+
+noremap <leader>o <Esc>:CommandT<CR>
+noremap <leader>O <Esc>:CommandTFlush<CR>
+noremap <leader>m <Esc>:CommandTBuffer<CR>
+
+let g:tagbar_usearrows = 1
+nnoremap <leader>l :TagbarToggle<CR>
