@@ -12,15 +12,14 @@ autocmd GUIEnter * set visualbell t_vb=
 set incsearch
 au FocusLost * :wa
 
-color codeschool
 set guifont=Monaco:h12
-let g:NERDTreeWinPos = "right"
+let g:NERDTreeWinPos = "left"
 set guioptions-=T " Removes top toolbar
 set guioptions-=r " Removes right hand scroll bar
 set go-=L " Removes left hand scroll bar
-autocmd User Rails let b:surround_{char2nr('-')} = "<% \r %>" " displays <% %> correctly
+"autocmd User Rails let b:surround_{char2nr('-')} = "<% \r %>" " displays <% %> correctly
 :set cpoptions+=$ " puts a $ marker for the end of words/lines in cw/c$ commands
-defaults write org.vim.MacVim MMTextInsetTop ‘5’
+"defaults write org.vim.MacVim MMTextInsetTop ‘5’
 
 
 set wrapscan
@@ -123,9 +122,6 @@ nmap Q gqap
 nnoremap j gj
 nnoremap k gk
 
-noremap <leader>o <Esc>:CommandT<CR>
-noremap <leader>O <Esc>:CommandTFlush<CR>
-noremap <leader>m <Esc>:CommandTBuffer<CR>
 
 let g:tagbar_usearrows = 1
 nnoremap <leader>l :TagbarToggle<CR>
