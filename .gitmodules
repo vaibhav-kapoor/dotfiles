@@ -28,3 +28,6 @@
 [submodule "vim/bundle/elrodeo-colorscheme"]
 	path = vim/bundle/elrodeo-colorscheme
 	url = git://github.com/chmllr/elrodeo-colorscheme.git
+[submodule "vim/bundle/color-schemes"]
+	path = vim/bundle/color-schemes
+	url = git://github.com/chrishunt/color-schemes.git

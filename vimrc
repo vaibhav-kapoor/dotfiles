@@ -12,6 +12,11 @@ autocmd GUIEnter * set visualbell t_vb=
 set incsearch
 au FocusLost * :wa
 
+set background=dark
+colorscheme vimbrant
+highlight ColorColumn ctermbg=7
+highlight ColorColumn guibg=Gray
+
 set guifont=Monaco:h12
 let g:NERDTreeWinPos = "left"
 set guioptions-=T " Removes top toolbar
