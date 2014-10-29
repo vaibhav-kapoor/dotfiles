@@ -2,6 +2,13 @@
 filetype off " Pathogen needs to run before plugin indent on
 call pathogen#infect()
 call pathogen#helptags() " generate helptags for everything in 'runtimepath'
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" " required! 
+" Bundle 'gmarik/vundle'
 filetype plugin indent on
 
 filetype plugin on
@@ -127,3 +134,14 @@ nmap Q gqap
 " move vertically by visual line
 nnoremap j gj
 nnoremap k gk
+
+set pastetoggle=<F2>
+
+syntax on
+set list listchars=tab:▷⋅,trail:⋅,nbsp:⋅
+set statusline=%F%m%r%h%w\ [TYPE=%Y\ %{&ff}]\
+                        \ [%l/%L\ (%p%%)
+filetype plugin indent on
+au FileType py set autoindent
+au FileType py set smartindent
+au FileType py set textwidth=79 " PEP-8 Friendly
