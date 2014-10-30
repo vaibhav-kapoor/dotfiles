@@ -54,7 +54,6 @@ set modelines=0
 set showmode
 set showcmd
 set hidden
-set visualbell
 set ttyfast
 set ruler
 set backspace=indent,eol,start
@@ -76,6 +75,11 @@ set autoread
 set shiftround
 set title
 set linebreak
+
+set backspace=2 " Backspace deletes like most programs in insert mode
+set nobackup
+set nowritebackup
+set noswapfile " http://robots.thoughtbot.com/post/18739402579/global-gitignore#comment-458413287
 
 
 "Don't try to highlight lines longer than 800 characters.
@@ -121,7 +125,6 @@ augroup END
 set number
 " Show nice info in ruler
 set ruler
-set laststatus=2 
 inoremap jj <ESC>
 let mapleader = "," 
 "set cindent
@@ -149,7 +152,6 @@ au FileType py set textwidth=79 " PEP-8 Friendly
 
 " Powerline setup
 set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 9
-set laststatus=2
 
 " Python-mode
 " Activate rope
@@ -192,11 +194,50 @@ let g:pymode_syntax_space_errors = g:pymode_syntax_all
 " Don't autofold code
 let g:pymode_folding = 0
 
+let g:pymode_options_colorcolumn = 0
+let g:pymode_options_max_line_length = 79
+" Smart indenting
+set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 
-augroup vimrc_autocmds
-    autocmd!
-    " highlight characters past column 120
-    autocmd FileType python highlight Excess ctermbg=DarkGrey guibg=Black
-    autocmd FileType python match Excess /\%120v.*/
-    autocmd FileType python set nowrap
-    augroup END
+
+" Highlight end of line whitespace.
+highlight WhitespaceEOL ctermbg=red guibg=red
+match WhitespaceEOL /\s\+$/
+
+" Track the engine.
+Plugin 'SirVer/ultisnips'
+
+" Snippets are separated from the engine. Add this if you want them:
+Plugin 'honza/vim-snippets'
+
+Plugin 'Chiel92/vim-autoformat'
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<c-tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
+" Fast saving
+nmap <leader>w :w!<cr>
+
+
+" Smart way to move between windows
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+
+" Close the current buffer
+map <leader>bd :bdelete<cr>
+
+" Close all the buffers
+map <leader>ba :1,1000 bd!<cr>
+
+" Useful mappings for managing tabs
+map <leader>tn :tabnew<cr>
+map <leader>to :tabonly<cr>
+map <leader>tc :tabclose<cr>
+map <leader>tm :tabmove
