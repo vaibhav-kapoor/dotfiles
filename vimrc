@@ -24,7 +24,7 @@ set go-=L " Removes left hand scroll bar
 "autocmd User Rails let b:surround_{char2nr('-')} = "<% \r %>" " displays <% %> correctly
 :set cpoptions+=$ " puts a $ marker for the end of words/lines in cw/c$ commands
 "defaults write org.vim.MacVim MMTextInsetTop ‘5’
-
+set breakat=\ ^I!@*-+;:,./?\(\[\{
 
 set wrapscan
 set infercase
@@ -139,6 +139,8 @@ set showmode
 "let g:syntastic_python_checkers=['flake8']
 "let g:syntastic_python_checker_args='--ignore=E501,E225'
 
+noremap <F3> :Autoformat<CR><CR>
+
 let g:pymode_indent = 1
 let g:pymode_folding = 1
 let g:pymode_motion = 1
@@ -152,3 +154,10 @@ let g:pymode_rope_complete_on_dot = 1
 let g:pymode_rope_autoimport = 1
 let g:pymode_syntax = 1
 let g:pymode_rope_lookup_project = 0
+
+let g:splitjoin_split_mapping = ''
+let g:splitjoin_join_mapping = ''
+
+nmap <Leader>j :SplitjoinJoin<cr>
+nmap <Leader>s :SplitjoinSplit<cr>
+
