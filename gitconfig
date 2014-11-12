@@ -10,5 +10,6 @@
 	lol = log --oneline --graph --decorate
 [core]
 	editor = vim
+	excludesfile = /home/thelegace/.gitignore
 [color]
 	ui = true
