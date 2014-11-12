@@ -1,0 +1,7 @@
+[user]
+	name = Vaibhav Kapoor
+	email = vaibhav.kapoor06@gmail.com
+[color]
+	ui = true
+[alias]
+	lol = log --oneline --graph --decorate
