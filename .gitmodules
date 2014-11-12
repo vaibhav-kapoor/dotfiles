@@ -19,3 +19,6 @@
 [submodule "vim/bundle/color-schemes"]
 	path = vim/bundle/color-schemes
 	url = git://github.com/chrishunt/color-schemes.git
+[submodule "vim/bundle/vimproc.vim"]
+	path = vim/bundle/vimproc.vim
+	url = git://github.com/Shougo/vimproc.vim.git
