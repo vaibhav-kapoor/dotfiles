@@ -61,3 +61,4 @@ csupport-usage-gvim	csupport.txt	/*csupport-usage-gvim*
 csupport-usage-vim	csupport.txt	/*csupport-usage-vim*
 csupport-windows	csupport.txt	/*csupport-windows*
 csupport.txt	csupport.txt	/*csupport.txt*
+help-tags	tags	1
