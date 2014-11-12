@@ -18,7 +18,6 @@ highlight ColorColumn ctermbg=7
 highlight ColorColumn guibg=Gray
 
 set guifont=Monaco:h12
-let g:NERDTreeWinPos = "left"
 set guioptions-=T " Removes top toolbar
 set guioptions-=r " Removes right hand scroll bar
 set go-=L " Removes left hand scroll bar
@@ -33,6 +32,9 @@ set expandtab " tabs are spaces
 set showmatch " highlight matching [{()}]
 set hlsearch " highlight matches
 
+set noswapfile
+set nobackup
+set nowritebackup
 
 set enc=utf-8
 set fenc=utf-8
@@ -58,7 +60,6 @@ set nonumber
 set norelativenumber
 set laststatus=2
 set history=1000
-set undofile
 set undoreload=10000
 set list
 set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮
@@ -130,3 +131,24 @@ nnoremap k gk
 
 let g:tagbar_usearrows = 1
 nnoremap <leader>l :TagbarToggle<CR>
+
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
+set showmode
+
+"let g:syntastic_python_checkers=['flake8']
+"let g:syntastic_python_checker_args='--ignore=E501,E225'
+
+let g:pymode_indent = 1
+let g:pymode_folding = 1
+let g:pymode_motion = 1
+let g:pymode_doc = 1
+let g:pymode_doc_bind = 'K'
+let g:pymode_run = 1
+let g:pymode_run_bind = '<leader>r'
+let g:pymode_lint_comment_symbol = 'CC'
+let g:pymode_rope_completion = 1
+let g:pymode_rope_complete_on_dot = 1
+let g:pymode_rope_autoimport = 1
+let g:pymode_syntax = 1
+let g:pymode_rope_lookup_project = 0
