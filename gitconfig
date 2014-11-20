@@ -8,8 +8,13 @@
 	up = rebase
 	ci = commit
 	lol = log --oneline --graph --decorate
+	d = difftool
 [core]
 	editor = vim
 	excludesfile = /home/thelegace/.gitignore
 [color]
 	ui = true
+[difftool]
+	prompt = false
+[diff]
+	tool = vimdiff
