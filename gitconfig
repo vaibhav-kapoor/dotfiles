@@ -1,6 +1,16 @@
-[user] 
+[user]
 	name = Vaibhav Kapoor
 	email = vaibhav.kapoor06@gmail.com
+[core]
+	editor = vim
+	excludesfile = /home/thelegace/.gitignore
+
+[diff]
+    external = git_diff_wrapper
+[pager]
+    diff =
+[color]
+    ui = auto
 [alias]
 	st = status
 	co = checkout
@@ -8,13 +18,3 @@
 	up = rebase
 	ci = commit
 	lol = log --oneline --graph --decorate
-	d = difftool
-[core]
-	editor = vim
-	excludesfile = /home/thelegace/.gitignore
-[color]
-	ui = true
-[difftool]
-	prompt = false
-[diff]
-	tool = vimdiff
